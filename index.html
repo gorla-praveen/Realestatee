@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HydProp – Premium Real Estate in Hyderabad</title>
+  <meta name="description" content="Discover premium properties in Hyderabad. Buy, sell or rent flats, villas, and plots in Banjara Hills, Jubilee Hills, Hitech City and more." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Index-specific overrides */
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media(max-width:900px){.hero-layout{grid-template-columns:1fr;} .hero-search-box{max-width:100%;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><i class="fa-solid fa-building"></i></div>
+      <span class="logo-text">HydProp</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="properties.html">Properties</a></li>
+      <li><a href="properties.html?status=sale">Buy</a></li>
+      <li><a href="properties.html?status=rent">Rent</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="container hero-content">
+    <div class="hero-layout">
+      <div>
+        <div class="hero-badge">
+          <span></span> Hyderabad's Most Trusted Realty
+        </div>
+        <h1>Find Your Dream Home <em>In Hyderabad</em></h1>
+        <p>Discover premium flats, villas, and plots across Banjara Hills, Jubilee Hills, Hitech City, Gachibowli and more. Your perfect property is just a search away.</p>
+        <div class="hero-actions">
+          <a href="properties.html" class="btn btn-primary"><i class="fa-solid fa-search"></i> Browse Properties</a>
+          <a href="contact.html" class="btn btn-outline">Talk to an Agent</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num">2,400<span>+</span></div><div class="label">Properties Listed</div></div>
+          <div class="hero-stat"><div class="num">950<span>+</span></div><div class="label">Happy Clients</div></div>
+          <div class="hero-stat"><div class="num">15<span>+</span></div><div class="label">Years in Hyderabad</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="hero-search-box">
+          <div class="hero-search-tabs">
+            <button class="search-tab active" data-type="sale">Buy</button>
+            <button class="search-tab" data-type="rent">Rent</button>
+            <button class="search-tab" data-type="">All</button>
+          </div>
+          <form id="heroSearchForm">
+            <div class="search-fields">
+              <div class="search-field">
+                <label>Location</label>
+                <select id="heroArea">
+                  <option value="">Any Area</option>
+                  <option>Banjara Hills</option>
+                  <option>Jubilee Hills</option>
+                  <option>Hitech City</option>
+                  <option>Gachibowli</option>
+                  <option>Madhapur</option>
+                  <option>Kondapur</option>
+                  <option>Kukatpally</option>
+                  <option>Begumpet</option>
+                  <option>Secunderabad</option>
+                  <option>Miyapur</option>
+                </select>
+              </div>
+              <div class="search-field">
+                <label>Property Type</label>
+                <select id="heroType">
+                  <option value="">Any Type</option>
+                  <option value="flat">Flat / Apartment</option>
+                  <option value="villa">Villa / Independent House</option>
+                  <option value="plot">Plot / Land</option>
+                  <option value="commercial">Commercial</option>
+                </select>
+              </div>
+              <div class="search-field">
+                <label>Budget (₹ Lakhs)</label>
+                <select id="heroBudget">
+                  <option value="">Any Budget</option>
+                  <option value="0-5000000">Up to ₹50 L</option>
+                  <option value="0-10000000">Up to ₹1 Cr</option>
+                  <option value="10000000-20000000">₹1 – 2 Cr</option>
+                  <option value="20000000-50000000">₹2 – 5 Cr</option>
+                  <option value="50000000-999999999">Above ₹5 Cr</option>
+                </select>
+              </div>
+              <div class="search-field">
+                <label>Bedrooms</label>
+                <select id="heroBeds">
+                  <option value="">Any</option>
+                  <option value="1">1 BHK+</option>
+                  <option value="2">2 BHK+</option>
+                  <option value="3">3 BHK+</option>
+                  <option value="4">4 BHK+</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Search Properties</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROPERTIES -->
+<section class="featured-section section-pad">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="tag-label">✦ Hand-Picked Listings</span>
+        <h2 class="section-title">Featured Properties</h2>
+        <p class="section-subtitle">Curated premium listings across Hyderabad's most sought-after neighbourhoods.</p>
+      </div>
+      <a href="properties.html" class="btn btn-dark">View All <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="properties-grid">
+
+      <!-- Card 1 -->
+      <div class="property-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80" alt="Villa Banjara Hills" loading="lazy" />
+          <div class="card-badges"><span class="badge badge-sale">For Sale</span><span class="badge badge-featured">Featured</span></div>
+          <button class="card-wishlist">🤍</button>
+          <div class="card-price-tag">₹4.2 Cr<small>Negotiable</small></div>
+        </div>
+        <div class="card-body">
+          <div class="card-location"><i class="fa-solid fa-location-dot"></i> Banjara Hills, Hyderabad</div>
+          <a href="property-detail.html" class="card-title">Luxurious 4BHK Villa with Private Pool</a>
+          <div class="card-features">
+            <div class="feat-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+            <div class="feat-item"><i class="fa-solid fa-bath"></i> 3 Baths</div>
+            <div class="feat-item"><i class="fa-solid fa-vector-square"></i> 3,200 sq ft</div>
+          </div>
+          <div class="card-footer">
+            <div class="agent-mini">
+              <img src="https://i.pravatar.cc/60?img=11" alt="Agent" />
+              <div><div class="name">Rajesh Kumar</div><div class="role">Senior Agent</div></div>
+            </div>
+            <a href="property-detail.html" class="card-view-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="property-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80" alt="Flat Hitech City" loading="lazy" />
+          <div class="card-badges"><span class="badge badge-rent">For Rent</span><span class="badge badge-new">New</span></div>
+          <button class="card-wishlist">🤍</button>
+          <div class="card-price-tag">₹55,000<small>Per Month</small></div>
+        </div>
+        <div class="card-body">
+          <div class="card-location"><i class="fa-solid fa-location-dot"></i> Hitech City, Hyderabad</div>
+          <a href="property-detail.html" class="card-title">Modern 3BHK Flat in Prime IT Corridor</a>
+          <div class="card-features">
+            <div class="feat-item"><i class="fa-solid fa-bed"></i> 3 Beds</div>
+            <div class="feat-item"><i class="fa-solid fa-bath"></i> 2 Baths</div>
+            <div class="feat-item"><i class="fa-solid fa-vector-square"></i> 1,850 sq ft</div>
+          </div>
+          <div class="card-footer">
+            <div class="agent-mini">
+              <img src="https://i.pravatar.cc/60?img=47" alt="Agent" />
+              <div><div class="name">Priya Sharma</div><div class="role">Rental Specialist</div></div>
+            </div>
+            <a href="property-detail.html" class="card-view-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="property-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80" alt="Villa Jubilee Hills" loading="lazy" />
+          <div class="card-badges"><span class="badge badge-sale">For Sale</span></div>
+          <button class="card-wishlist">🤍</button>
+          <div class="card-price-tag">₹7.8 Cr<small>Best Price</small></div>
+        </div>
+        <div class="card-body">
+          <div class="card-location"><i class="fa-solid fa-location-dot"></i> Jubilee Hills, Hyderabad</div>
+          <a href="property-detail.html" class="card-title">Ultra-Premium 5BHK Duplex Villa</a>
+          <div class="card-features">
+            <div class="feat-item"><i class="fa-solid fa-bed"></i> 5 Beds</div>
+            <div class="feat-item"><i class="fa-solid fa-bath"></i> 5 Baths</div>
+            <div class="feat-item"><i class="fa-solid fa-vector-square"></i> 5,500 sq ft</div>
+          </div>
+          <div class="card-footer">
+            <div class="agent-mini">
+              <img src="https://i.pravatar.cc/60?img=68" alt="Agent" />
+              <div><div class="name">Arun Reddy</div><div class="role">Luxury Expert</div></div>
+            </div>
+            <a href="property-detail.html" class="card-view-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section section-pad">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content">
+        <span class="tag-label">✦ Why HydProp</span>
+        <h2 class="section-title">Hyderabad's Most Trusted Real Estate Partner</h2>
+        <p class="section-subtitle">With 15+ years serving the City of Pearls, we bring local expertise and transparent dealings to every transaction.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h4>Verified Listings Only</h4>
+              <p>Every property is physically verified by our Hyderabad field team — no fake listings, no surprises.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <h4>RERA Registered Agents</h4>
+              <p>All our agents are RERA-compliant and fully licensed under Telangana Real Estate Authority.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div>
+              <h4>Best Market Insights</h4>
+              <p>Get data-driven price trends for Banjara Hills, Gachibowli, Kondapur and all major zones.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h4>End-to-End Support</h4>
+              <p>From site visits to registration at Hyderabad Sub-Registrar Office — we handle it all.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-image-stack">
+        <div class="why-img-main">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Hyderabad Property" />
+        </div>
+        <div class="why-img-card">
+          <div class="big-num">₹2,400 Cr+</div>
+          <div class="label">Properties Sold in Hyderabad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR AREAS -->
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center">
+      <span class="tag-label">✦ Explore by Location</span>
+      <h2 class="section-title">Popular Areas in Hyderabad</h2>
+      <p class="section-subtitle mt-12">Browse properties in Hyderabad's most in-demand neighbourhoods.</p>
+    </div>
+    <div class="areas-grid">
+      <a href="properties.html?area=Banjara+Hills" class="area-card">
+        <img src="https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=400&q=80" alt="Banjara Hills" loading="lazy" />
+        <div class="area-overlay"><div class="area-name">Banjara Hills</div><div class="area-count">142 Properties</div></div>
+      </a>
+      <a href="properties.html?area=Jubilee+Hills" class="area-card">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80" alt="Jubilee Hills" loading="lazy" />
+        <div class="area-overlay"><div class="area-name">Jubilee Hills</div><div class="area-count">98 Properties</div></div>
+      </a>
+      <a href="properties.html?area=Hitech+City" class="area-card">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=80" alt="Hitech City" loading="lazy" />
+        <div class="area-overlay"><div class="area-name">Hitech City</div><div class="area-count">215 Properties</div></div>
+      </a>
+      <a href="properties.html?area=Gachibowli" class="area-card">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&q=80" alt="Gachibowli" loading="lazy" />
+        <div class="area-overlay"><div class="area-name">Gachibowli</div><div class="area-count">187 Properties</div></div>
+      </a>
+      <a href="properties.html?area=Madhapur" class="area-card">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=80" alt="Madhapur" loading="lazy" />
+        <div class="area-overlay"><div class="area-name">Madhapur</div><div class="area-count">163 Properties</div></div>
+      </a>
+      <a href="properties.html?area=Kondapur" class="area-card">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&q=80" alt="Kondapur" loading="lazy" />
+        <div class="area-overlay"><div class="area-name">Kondapur</div><div class="area-count">122 Properties</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- OUR AGENTS -->
+<section class="section-pad" style="background:var(--off-white);">
+  <div class="container">
+    <div class="text-center">
+      <span class="tag-label">✦ Meet the Team</span>
+      <h2 class="section-title">Our Top Agents</h2>
+      <p class="section-subtitle mt-12">Experienced professionals who know Hyderabad's real estate market inside out.</p>
+    </div>
+    <div class="agents-grid">
+      <div class="agent-card">
+        <img src="https://i.pravatar.cc/150?img=11" alt="Rajesh Kumar" class="agent-avatar" />
+        <h3>Rajesh Kumar</h3>
+        <div class="role">Senior Property Advisor</div>
+        <div class="agent-stats">
+          <div class="agent-stat"><div class="val">87</div><div class="lbl">Sales</div></div>
+          <div class="agent-stat"><div class="val">12</div><div class="lbl">Years Exp</div></div>
+          <div class="agent-stat"><div class="val">4.9★</div><div class="lbl">Rating</div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Contact Agent</a>
+        <div class="agent-socials mt-12">
+          <div class="agent-social-btn"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="agent-social-btn"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="agent-social-btn"><i class="fa-solid fa-phone"></i></div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <img src="https://i.pravatar.cc/150?img=47" alt="Priya Sharma" class="agent-avatar" />
+        <h3>Priya Sharma</h3>
+        <div class="role">Rental Specialist</div>
+        <div class="agent-stats">
+          <div class="agent-stat"><div class="val">124</div><div class="lbl">Rentals</div></div>
+          <div class="agent-stat"><div class="val">8</div><div class="lbl">Years Exp</div></div>
+          <div class="agent-stat"><div class="val">4.8★</div><div class="lbl">Rating</div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Contact Agent</a>
+        <div class="agent-socials mt-12">
+          <div class="agent-social-btn"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="agent-social-btn"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="agent-social-btn"><i class="fa-solid fa-phone"></i></div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <img src="https://i.pravatar.cc/150?img=68" alt="Arun Reddy" class="agent-avatar" />
+        <h3>Arun Reddy</h3>
+        <div class="role">Luxury Properties Expert</div>
+        <div class="agent-stats">
+          <div class="agent-stat"><div class="val">61</div><div class="lbl">Sales</div></div>
+          <div class="agent-stat"><div class="val">10</div><div class="lbl">Years Exp</div></div>
+          <div class="agent-stat"><div class="val">5.0★</div><div class="lbl">Rating</div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Contact Agent</a>
+        <div class="agent-socials mt-12">
+          <div class="agent-social-btn"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="agent-social-btn"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="agent-social-btn"><i class="fa-solid fa-phone"></i></div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <img src="https://i.pravatar.cc/150?img=25" alt="Meera Nair" class="agent-avatar" />
+        <h3>Meera Nair</h3>
+        <div class="role">Commercial Property Advisor</div>
+        <div class="agent-stats">
+          <div class="agent-stat"><div class="val">45</div><div class="lbl">Deals</div></div>
+          <div class="agent-stat"><div class="val">7</div><div class="lbl">Years Exp</div></div>
+          <div class="agent-stat"><div class="val">4.7★</div><div class="lbl">Rating</div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Contact Agent</a>
+        <div class="agent-socials mt-12">
+          <div class="agent-social-btn"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="agent-social-btn"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="agent-social-btn"><i class="fa-solid fa-phone"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section section-pad">
+  <div class="container">
+    <div class="text-center">
+      <span class="tag-label">✦ Client Stories</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-subtitle mt-12">Real experiences from families and investors across Hyderabad.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Found our dream villa in Banjara Hills within 3 weeks! Rajesh was incredibly knowledgeable about the locality and helped us negotiate a great price. Highly recommend HydProp."</p>
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/80?img=33" alt="Reviewer" />
+          <div><div class="name">Suresh & Kavitha Rao</div><div class="location">Banjara Hills, Hyderabad</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"As an NRI investing in Hyderabad, I was worried about documentation and verification. HydProp handled everything seamlessly, including RERA checks and registration."</p>
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/80?img=52" alt="Reviewer" />
+          <div><div class="name">Vijay Nambiar</div><div class="location">NRI – Dubai | Invested in Gachibowli</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★☆</div>
+        <p>"Priya helped us find a fully-furnished 3BHK near Hitech City within our budget. The process was smooth and the flat was exactly as shown. Will use again."</p>
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/80?img=44" alt="Reviewer" />
+          <div><div class="name">Anand Krishnamurthy</div><div class="location">Madhapur, Hyderabad</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Find Your Property in Hyderabad?</h2>
+    <p>Over 2,400 verified listings across all major Hyderabad localities. Let's help you find the perfect home.</p>
+    <div class="cta-btns">
+      <a href="properties.html" class="btn" style="background:var(--white);color:var(--primary);font-weight:700;">Browse Listings</a>
+      <a href="contact.html" class="btn btn-outline">Get Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo-text">HydProp</div>
+        <p>Hyderabad's trusted real estate partner since 2009. We specialize in residential and commercial properties across all major localities in the Twin Cities.</p>
+        <div class="footer-socials">
+          <div class="social-btn"><i class="fa-brands fa-facebook-f"></i></div>
+          <div class="social-btn"><i class="fa-brands fa-instagram"></i></div>
+          <div class="social-btn"><i class="fa-brands fa-twitter"></i></div>
+          <div class="social-btn"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="social-btn"><i class="fa-brands fa-youtube"></i></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">All Properties</a></li>
+          <li><a href="properties.html?status=sale">Buy Property</a></li>
+          <li><a href="properties.html?status=rent">Rent Property</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Top Areas</h4>
+        <ul>
+          <li><a href="properties.html?area=Banjara+Hills">Banjara Hills</a></li>
+          <li><a href="properties.html?area=Jubilee+Hills">Jubilee Hills</a></li>
+          <li><a href="properties.html?area=Hitech+City">Hitech City</a></li>
+          <li><a href="properties.html?area=Gachibowli">Gachibowli</a></li>
+          <li><a href="properties.html?area=Kondapur">Kondapur</a></li>
+          <li><a href="properties.html?area=Kukatpally">Kukatpally</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Plot 42, Road No.10, Banjara Hills, Hyderabad – 500034, Telangana</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+91 40 4567 8900<br/>+91 98765 43210</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>info@hydprop.in<br/>support@hydprop.in</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-clock"></i><span>Mon – Sat: 9:00 AM – 7:00 PM<br/>Sunday: 10:00 AM – 4:00 PM</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span>HydProp</span>. All Rights Reserved. RERA No: TG/RERA/2019/001234</p>
+      <p>Designed for Hyderabad, Telangana, India</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
